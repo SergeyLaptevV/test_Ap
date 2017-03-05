@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TZ Аперкон</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;language=ru&amp;key=AIzaSyAOPZ1KeHh0jx6d1ejvhqTpVgipWRlQW3A"></script>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+    <div class="main">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="btn-group btn-group-justified">
+                    <a href="#" ng-click="showMap()" class="btn btn-primary">Map</a>
+                    <a href="#" ng-click="showList()" class="btn btn-primary">List</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <form>
+                    <input type="text" class="form-control" placeholder="Search" ng-model="search">
+                </form>
+            </div>
+        </div>
+        <ng-include src="url"></ng-include>
+        <div id="map"></div>
+    </div>
+</body>
+
+<script src="js/main.js"></script>
+</html>
